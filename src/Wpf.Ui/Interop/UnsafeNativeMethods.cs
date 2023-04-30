@@ -395,9 +395,22 @@ public static class UnsafeNativeMethods
     /// </summary>
     public static Color GetDwmColor()
     {
-        Dwmapi.DwmGetColorizationParameters(out var dwmParams);
+        byte[] values;
 
-        var values = BitConverter.GetBytes(dwmParams.clrColor);
+        try
+        {
+            Dwmapi.DwmGetColorizationParameters(out var dwmParams);
+            values = BitConverter.GetBytes(dwmParams.clrColor);
+        }
+        catch (Exception)
+        {
+            values = new byte[]
+            {
+                255,
+                255,
+                255
+            }
+        }
 
         return Color.FromArgb(
             255,
