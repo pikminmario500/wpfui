@@ -409,7 +409,7 @@ public static class UnsafeNativeMethods
                 255,
                 255,
                 255
-            }
+            };
         }
 
         return Color.FromArgb(
