@@ -14,7 +14,7 @@
     xmlns:controls="clr-namespace:Wpf.Ui.Controls"
     xmlns:system="clr-namespace:System;assembly=System.Runtime">
 
-    <Thickness x:Key="CardExpanderPadding">14,16,14,16</Thickness>
+    <Thickness x:Key="CardExpanderPadding">16,13,16,12</Thickness>
     <Thickness x:Key="CardExpanderBorderThemeThickness">1</Thickness>
     <Thickness x:Key="CardExpanderIconMargin">0,0,14,0</Thickness>
     <Thickness x:Key="CardExpanderContentMargin">14,0,0,0</Thickness>
