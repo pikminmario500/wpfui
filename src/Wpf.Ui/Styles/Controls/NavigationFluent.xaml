@@ -13,7 +13,7 @@
 
     <Style x:Key="NavigationFluentItem" TargetType="{x:Type controls:NavigationItem}">
         <Setter Property="Margin" Value="0,0,0,4" />
-        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Cursor" Value="Arrow" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="IconSize" Value="18" />
         <Setter Property="VerticalAlignment" Value="Center" />

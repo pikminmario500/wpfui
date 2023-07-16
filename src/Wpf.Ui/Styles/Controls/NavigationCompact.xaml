@@ -159,7 +159,7 @@
         <Setter Property="Margin" Value="0,0,0,4" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="IconSize" Value="18" />
-        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Cursor" Value="Arrow" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Background">
