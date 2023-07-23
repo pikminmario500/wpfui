@@ -15,7 +15,6 @@ namespace Wpf.Ui.Interop;
 /// <summary>
 /// A set of dangerous methods to modify the appearance.
 /// </summary>
-[Obsolete("This class is not depracted, but is dangerous to use.")]
 public static class UnsafeNativeMethods
 {
     #region Window Corners
