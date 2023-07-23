@@ -252,12 +252,14 @@ public class UiWindow : System.Windows.Window
 
         // TODO: Rewrite custom window chrome
 
+        bool win11beta = Environment.OSVersion.Version.Build > 21000 && Environment.OSVersion.Version.Build < 22000;
+
         WindowChrome.SetWindowChrome(this,
             new WindowChrome
             {
                 CaptionHeight = 1,
                 CornerRadius = new CornerRadius(4),
-                GlassFrameThickness = new Thickness(-1),
+                GlassFrameThickness = new Thickness(win11beta ? 0 : -1),
                 ResizeBorderThickness = this.ResizeMode == ResizeMode.NoResize ? new Thickness(0) : new Thickness(4),
                 UseAeroCaptionButtons = false
             });
