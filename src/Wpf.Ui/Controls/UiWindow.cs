@@ -259,7 +259,8 @@ public class UiWindow : System.Windows.Window
                 CornerRadius = new CornerRadius(4),
                 GlassFrameThickness = new Thickness(-1),
                 ResizeBorderThickness = this.ResizeMode == ResizeMode.NoResize ? new Thickness(0) : new Thickness(4),
-                UseAeroCaptionButtons = false
+                UseAeroCaptionButtons = false,
+                NonClientFrameEdges = NonClientFrameEdges.Bottom
             });
     }
 
