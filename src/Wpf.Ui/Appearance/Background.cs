@@ -29,6 +29,7 @@ public static class Background
             BackgroundType.Tabbed => Win32.Utilities.IsOSWindows11Insider1OrNewer,
             BackgroundType.Mica => Win32.Utilities.IsOSWindows11OrNewer,
             BackgroundType.Acrylic => Win32.Utilities.IsOSWindows7OrNewer,
+            BackgroundType.Aero => Win32.Utilities.IsOSWindows7OrNewer,
             BackgroundType.Unknown => true,
             BackgroundType.None => true,
             _ => false
@@ -128,6 +129,9 @@ public static class Background
         UnsafeNativeMethods.RemoveWindowCaption(handle);
 
         AppearanceData.AddHandle(handle);
+
+        if (type == BackgroundType.Aero)
+            return UnsafeNativeMethods.ApplyWindowAeroEffect(handle);
 
         // First release of Windows 11
         if (!Win32.Utilities.IsOSWindows11Insider1OrNewer)
@@ -335,7 +339,7 @@ public static class Background
                     UnsafeNativeMethods.ApplyWindowLegacyMicaEffect(singleHandle);
             }
 
-            // TODO: Legacy acrylic effect
+            // TODO: Legacy acrylic effect and aero too
 
             //if (backdropType == BackgroundType.Acrylic)
             //{

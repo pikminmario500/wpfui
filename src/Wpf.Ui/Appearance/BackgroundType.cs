@@ -36,6 +36,11 @@ public enum BackgroundType
     Acrylic,
 
     /// <summary>
+    /// Windows Aero effect
+    /// </summary>
+    Aero,
+
+    /// <summary>
     /// Windows 11 wallpaper blur effect.
     /// </summary>
     Tabbed

@@ -387,6 +387,49 @@ public static class UnsafeNativeMethods
 
     #endregion
 
+    #region Windows Aero
+
+    /// <summary>
+    /// Tries to apply Aero effect for the selected <see cref="Window"/>.
+    /// </summary>
+    /// <param name="window">The window to which the effect is to be applied.</param>
+    /// <returns><see langword="true"/> if invocation of native Windows function succeeds.</returns>
+    public static bool ApplyWindowAeroEffect(Window window)
+        => GetHandle(window, out IntPtr windowHandle) && ApplyWindowAeroEffect(windowHandle);
+
+    /// <summary>
+    /// Tries to apply Aero effect for the selected <see cref="Window"/>.
+    /// </summary>
+    /// <param name="handle">Window handle</param>
+    /// <returns><see langword="true"/> if invocation of native Windows function succeeds.</returns>
+    public static bool ApplyWindowAeroEffect(IntPtr handle)
+    {
+        var accentPolicy = new Interop.User32.ACCENT_POLICY
+        {
+            nAccentState = User32.ACCENT_STATE.ACCENT_ENABLE_BLURBEHIND
+        };
+
+        var accentStructSize = Marshal.SizeOf(accentPolicy);
+        var accentPtr = Marshal.AllocHGlobal(accentStructSize);
+
+        Marshal.StructureToPtr(accentPolicy, accentPtr, false);
+
+        var data = new User32.WINCOMPATTRDATA
+        {
+            Attribute = User32.WCA.WCA_ACCENT_POLICY,
+            SizeOfData = accentStructSize,
+            Data = accentPtr
+        };
+
+        User32.SetWindowCompositionAttribute(handle, ref data);
+
+        Marshal.FreeHGlobal(accentPtr);
+
+        return true;
+    }
+
+    #endregion
+
     #region DMWA Colorization
 
     /// <summary>
