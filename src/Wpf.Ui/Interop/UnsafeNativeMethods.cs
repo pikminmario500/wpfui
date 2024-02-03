@@ -390,7 +390,7 @@ public static class UnsafeNativeMethods
     #region Windows Aero
 
     /// <summary>
-    /// Tries to apply legacy Acrylic effect for the selected <see cref="Window"/>.
+    /// Tries to apply Aero effect for the selected <see cref="Window"/>.
     /// </summary>
     /// <param name="window">The window to which the effect is to be applied.</param>
     /// <returns><see langword="true"/> if invocation of native Windows function succeeds.</returns>
@@ -398,7 +398,7 @@ public static class UnsafeNativeMethods
         => GetHandle(window, out IntPtr windowHandle) && ApplyWindowAeroEffect(windowHandle);
 
     /// <summary>
-    /// Tries to apply legacy Acrylic effect for the selected <see cref="Window"/>.
+    /// Tries to apply Aero effect for the selected <see cref="Window"/>.
     /// </summary>
     /// <param name="handle">Window handle</param>
     /// <returns><see langword="true"/> if invocation of native Windows function succeeds.</returns>
