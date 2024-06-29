@@ -132,8 +132,7 @@
                 x:Name="PART_Track"
                 Grid.Row="1"
                 Width="6"
-                IsDirectionReversed="True"
-                Opacity="0">
+                IsDirectionReversed="True">
                 <Track.DecreaseRepeatButton>
                     <RepeatButton Command="ScrollBar.PageUpCommand" Style="{StaticResource DynamicScrollBarPageButton}" />
                 </Track.DecreaseRepeatButton>
@@ -201,32 +200,6 @@
                                 Duration="{StaticResource DynamicScrollAnimationDuration}" />
                             <DoubleAnimation
                                 Storyboard.TargetName="PART_ButtonScrollDown"
-                                Storyboard.TargetProperty="Opacity"
-                                From="1.0"
-                                To="0.0"
-                                Duration="{StaticResource DynamicScrollAnimationDuration}" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.ExitActions>
-            </Trigger>
-            <Trigger Property="IsInteracted" Value="True">
-                <Trigger.EnterActions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation
-                                Storyboard.TargetName="PART_Track"
-                                Storyboard.TargetProperty="Opacity"
-                                From="0.0"
-                                To="1.0"
-                                Duration="{StaticResource DynamicScrollAnimationDuration}" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.EnterActions>
-                <Trigger.ExitActions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation
-                                Storyboard.TargetName="PART_Track"
                                 Storyboard.TargetProperty="Opacity"
                                 From="1.0"
                                 To="0.0"
@@ -328,32 +301,6 @@
                                 Duration="{StaticResource DynamicScrollAnimationDuration}" />
                             <DoubleAnimation
                                 Storyboard.TargetName="PART_ButtonScrollRight"
-                                Storyboard.TargetProperty="Opacity"
-                                From="1.0"
-                                To="0.0"
-                                Duration="{StaticResource DynamicScrollAnimationDuration}" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.ExitActions>
-            </Trigger>
-            <Trigger Property="IsInteracted" Value="True">
-                <Trigger.EnterActions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation
-                                Storyboard.TargetName="PART_Track"
-                                Storyboard.TargetProperty="Opacity"
-                                From="0.0"
-                                To="1.0"
-                                Duration="{StaticResource DynamicScrollAnimationDuration}" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.EnterActions>
-                <Trigger.ExitActions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation
-                                Storyboard.TargetName="PART_Track"
                                 Storyboard.TargetProperty="Opacity"
                                 From="1.0"
                                 To="0.0"
