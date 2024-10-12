@@ -2,7 +2,7 @@
 <Project>
   <PropertyGroup>
     <Version>2.0.3</Version>
-    <LangVersion>10.0</LangVersion>
+    <LangVersion>12.0</LangVersion>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
 
@@ -17,8 +17,8 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageLicense>https://raw.githubusercontent.com/lepoco/wpfui/main/LICENSE</PackageLicense>
-    <PackageProjectUrl>https://github.com/lepoco/wpfui</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/lepoco/wpfui</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/pikminmario500/wpfui</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pikminmario500/wpfui</RepositoryUrl>
     <RepositoryBranch>main</RepositoryBranch>
     <RepositoryType>git</RepositoryType>
     <Description>A simple way to make your application written in WPF keep up with modern design trends. Library changes the base elements like Page, ToggleButton or List, and also includes additional controls like Navigation, NumberBox, Dialog or Snackbar.</Description>

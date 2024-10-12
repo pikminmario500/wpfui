@@ -10,8 +10,8 @@ jobs:
   build:
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v3
-      - uses: dorny/paths-filter@v2
+      - uses: actions/checkout@main
+      - uses: dorny/paths-filter@master
         id: changes
         with:
           filters: |
@@ -19,7 +19,7 @@ jobs:
               - 'Directory.Build.props'
 
       - name: Publish
-        uses: alirezanet/publish-nuget@v3.0.4
+        uses: alirezanet/publish-nuget@master
         with:
           PROJECT_FILE_PATH: src/Wpf.Ui/Wpf.Ui.csproj
           VERSION_FILE_PATH: src/Directory.Build.props
