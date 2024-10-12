@@ -55,11 +55,11 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <PackageReference Include="System.ValueTuple" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" Version="8.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
