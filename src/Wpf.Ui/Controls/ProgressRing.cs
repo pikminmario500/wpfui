@@ -131,17 +131,6 @@ public class ProgressRing : RangeBase
         EngAngle = endAngle;
     }
 
-    /// <summary>
-    /// Validates the entered <see cref="Progress"/> and redraws the <see cref="Arc"/>.
-    /// </summary>
-    protected static void PropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    {
-        if (d is not ProgressRing control)
-            return;
-
-        control.UpdateProgressAngle();
-    }
-
     protected override void OnValueChanged(double oldValue, double newValue)
     {
         base.OnValueChanged(oldValue, newValue);
