@@ -8,6 +8,7 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using Brush = System.Windows.Media.Brush;
 using Brushes = System.Windows.Media.Brushes;
 
@@ -18,15 +19,8 @@ namespace Wpf.Ui.Controls;
 /// </summary>
 [ToolboxItem(true)]
 [ToolboxBitmap(typeof(ProgressRing), "ProgressRing.bmp")]
-public class ProgressRing : System.Windows.Controls.Control
+public class ProgressRing : RangeBase
 {
-    /// <summary>
-    /// Property for <see cref="Progress"/>.
-    /// </summary>
-    public static readonly DependencyProperty ProgressProperty = DependencyProperty.Register(nameof(Progress),
-        typeof(double), typeof(ProgressRing),
-        new PropertyMetadata(50d, PropertyChangedCallback));
-
     /// <summary>
     /// Property for <see cref="IsIndeterminate"/>.
     /// </summary>
@@ -71,15 +65,6 @@ public class ProgressRing : System.Windows.Controls.Control
         nameof(CoverRingVisibility),
         typeof(System.Windows.Visibility), typeof(ProgressRing),
         new PropertyMetadata(System.Windows.Visibility.Visible));
-
-    /// <summary>
-    /// Gets or sets the progress.
-    /// </summary>
-    public double Progress
-    {
-        get => (double)GetValue(ProgressProperty);
-        set => SetValue(ProgressProperty, value);
-    }
 
     /// <summary>
     /// Determines if <see cref="ProgressRing"/> shows actual values (<see langword="false"/>)
@@ -127,21 +112,18 @@ public class ProgressRing : System.Windows.Controls.Control
         internal set => SetValue(CoverRingVisibilityProperty, value);
     }
 
+    public ProgressRing()
+    {
+        UpdateProgressAngle();
+    }
+
     /// <summary>
     /// Re-draws <see cref="Arc.EndAngle"/> depending on <see cref="Progress"/>.
     /// </summary>
     protected void UpdateProgressAngle()
     {
-        var percentage = Progress;
-
-        if (percentage > 100)
-            percentage = 100;
-
-        if (percentage < 0)
-            percentage = 0;
-
         // (360 / 100) * percentage
-        var endAngle = 3.6d * percentage;
+        var endAngle = (360d / Maximum) * Value;
 
         if (endAngle >= 360)
             endAngle = 359;
@@ -149,14 +131,15 @@ public class ProgressRing : System.Windows.Controls.Control
         EngAngle = endAngle;
     }
 
-    /// <summary>
-    /// Validates the entered <see cref="Progress"/> and redraws the <see cref="Arc"/>.
-    /// </summary>
-    protected static void PropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    protected override void OnValueChanged(double oldValue, double newValue)
     {
-        if (d is not ProgressRing control)
-            return;
+        base.OnValueChanged(oldValue, newValue);
+        UpdateProgressAngle();
+    }
 
-        control.UpdateProgressAngle();
+    protected override void OnMaximumChanged(double oldMaximum, double newMaximum)
+    {
+        base.OnMaximumChanged(oldMaximum, newMaximum);
+        UpdateProgressAngle();
     }
 }
