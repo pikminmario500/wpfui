@@ -53,8 +53,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.11.40262" ExcludeAssets="runtime" />
-    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.11.439" />
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.12.40392" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.12.2069" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Templates\Wpf.Ui.Mvvm.CompactNavigation\Wpf.Ui.Mvvm.CompactNavigation.Template.csproj">
