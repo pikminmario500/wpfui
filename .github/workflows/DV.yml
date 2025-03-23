@@ -26,10 +26,10 @@ jobs:
       - name: Build
         run: msbuild src/Wpf.Ui.sln -p:Configuration=Release -m
 
-      - name: Publish net80
+      - name: Publish net100
         uses: actions/upload-artifact@main
-        id: publish_net8
+        id: publish_net10
         with:
-          name: WPFUI_DEMO-NET8
+          name: WPFUI_DEMO-NET10
           path: |
-            src/Wpf.Ui.Demo/bin/Release/net8.0-windows
+            src/Wpf.Ui.Demo/bin/Release/net10.0-windows

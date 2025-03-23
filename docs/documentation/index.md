@@ -1,7 +1,7 @@
 # Introduction
 
 WPF UI is a library designed for building modern user interfaces in a Windows Presentation Foundation (WPF) environment.  
-By default, the library is created for `.NET 8`. If you want to know more about .NET 8, [have a look here](https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8).
+By default, the library is created for `.NET 10`. If you want to know more about .NET 10, [have a look here](https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10).
 
 ![Demo App Sample](https://user-images.githubusercontent.com/13592821/166259110-0fb98120-fe34-4e6d-ab92-9f72ad7113c3.png)
 
