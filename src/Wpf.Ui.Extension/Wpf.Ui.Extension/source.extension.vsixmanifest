@@ -10,7 +10,7 @@
         <ReleaseNotes>https://github.com/lepoco/wpfui/releases</ReleaseNotes>
         <Icon>wpfui.png</Icon>
         <PreviewImage>preview.png</PreviewImage>
-        <Tags>wpf ui wpfui fluent design winui windows controls custom metro modern xaml toolkit color dark theme lepo net6 net5 net</Tags>
+        <Tags>wpf ui wpfui fluent design winui windows controls custom metro modern xaml toolkit color dark theme lepo net8 net5 net</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
@@ -27,6 +27,6 @@
     </Assets>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
-        <Prerequisite Id="Microsoft.NetCore.Component.Runtime.6.0" Version="[17.2.32503.368,18.0)" DisplayName=".NET 6.0 Runtime (LTS)" />
+        <Prerequisite Id="Microsoft.NetCore.Component.Runtime.8.0" Version="[17.13.35806.99	)" DisplayName=".NET 8.0 Runtime (LTS)" />
     </Prerequisites>
 </PackageManifest>
