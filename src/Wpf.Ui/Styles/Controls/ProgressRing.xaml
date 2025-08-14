@@ -22,11 +22,6 @@
                 <SolidColorBrush Color="{DynamicResource SystemAccentColorSecondary}" />
             </Setter.Value>
         </Setter>
-        <Setter Property="CoverRingStroke">
-            <Setter.Value>
-                <SolidColorBrush Color="{DynamicResource ControlStrokeColorDefault}" />
-            </Setter.Value>
-        </Setter>
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="Template">
@@ -36,7 +31,7 @@
                         <controls:Arc
                             EndAngle="359"
                             StartAngle="0"
-                            Stroke="{TemplateBinding CoverRingStroke}"
+                            Stroke="{DynamicResource ControlStrokeColorDefault}"
                             StrokeThickness="{Binding Path=Height, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay, Converter={StaticResource ProgressThicknessConverter}}"
                             Visibility="{TemplateBinding CoverRingVisibility}" />
                         <controls:Arc
@@ -57,7 +52,7 @@
                                 <controls:Arc
                                     EndAngle="359"
                                     StartAngle="0"
-                                    Stroke="{TemplateBinding CoverRingStroke}"
+                                    Stroke="{DynamicResource ControlStrokeColorDefault}"
                                     StrokeThickness="{Binding Path=Height, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay, Converter={StaticResource ProgressThicknessConverter}}"
                                     Visibility="{TemplateBinding CoverRingVisibility}" />
                                 <controls:Arc
