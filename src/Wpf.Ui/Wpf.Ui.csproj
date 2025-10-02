@@ -23,14 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Fonts\FiraCode-Regular.ttf" />
     <None Remove="Fonts\FluentSystemIcons-Filled.ttf" />
     <None Remove="Fonts\FluentSystemIcons-Regular.ttf" />
     <None Remove="Fonts\SegoeFluentIcons.ttf" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\FiraCode-Regular.ttf" />
     <Resource Include="Fonts\FluentSystemIcons-Filled.ttf" />
     <Resource Include="Fonts\FluentSystemIcons-Regular.ttf" />
   </ItemGroup>
@@ -70,7 +68,6 @@
     <None Remove="Controls\Card.bmp" />
     <None Remove="Controls\CardAction.bmp" />
     <None Remove="Controls\CardExpander.bmp" />
-    <None Remove="Controls\CodeBlock.bmp" />
     <None Remove="Controls\Dialog.bmp" />
     <None Remove="Controls\DynamicScrollBar.bmp" />
     <None Remove="Controls\DynamicScrollViewer.bmp" />
@@ -105,7 +102,6 @@
     <EmbeddedResource Include="Controls\CardExpander.bmp" />
     <EmbeddedResource Include="Controls\CardAction.bmp" />
     <EmbeddedResource Include="Controls\Card.bmp" />
-    <EmbeddedResource Include="Controls\CodeBlock.bmp" />
     <EmbeddedResource Include="Controls\DynamicScrollBar.bmp" />
     <EmbeddedResource Include="Controls\DynamicScrollViewer.bmp" />
     <EmbeddedResource Include="Controls\MessageBox.bmp" />

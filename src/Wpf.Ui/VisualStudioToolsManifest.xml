@@ -13,7 +13,6 @@
             <Item Type="Wpf.Ui.Controls.CardControl" />
             <Item Type="Wpf.Ui.Controls.CardExpander" />
             <Item Type="Wpf.Ui.Controls.ClientAreaBorder" />
-            <Item Type="Wpf.Ui.Controls.CodeBlock" />
             <Item Type="Wpf.Ui.Controls.Dialog" />
             <Item Type="Wpf.Ui.Controls.DropDownButton" />
             <Item Type="Wpf.Ui.Controls.DynamicScrollBar" />
